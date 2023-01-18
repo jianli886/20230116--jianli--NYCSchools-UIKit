@@ -25,7 +25,7 @@ class SchoolListViewController: UIViewController {
         return label
     }()
     
-    private var schoolListView: SchoolListView = SchoolListView(viewModel: SchoolListViewModel())
+    lazy private var schoolListView: SchoolListView = SchoolListView(controller: self, viewModel: SchoolListViewModel())
 
     private func setupUI() {
         view.backgroundColor = .white

@@ -9,14 +9,17 @@ import UIKit
 import Combine
 
 class SchoolListView: UITableView {
+    private let controller: UIViewController
     private let viewModel: SchoolListViewModel
     private var subscribers = Set<AnyCancellable>()
     var searcher = UISearchController(searchResultsController: nil)
     
-    init(viewModel: SchoolListViewModel) {
+    init(controller: UIViewController,viewModel: SchoolListViewModel) {
+        self.controller = controller
         self.viewModel = viewModel
         super.init(frame: .zero, style: .plain)
         self.dataSource = self
+        self.delegate = self
         self.register(SchoolListViewCell.self, forCellReuseIdentifier: SchoolListViewCell.identifier)
         self.rowHeight = 60
         addBindings()
@@ -64,8 +67,15 @@ extension SchoolListView: UITableViewDataSource {
         }
         return cell
     }
-    
-    override func selectRow(at indexPath: IndexPath?, animated: Bool, scrollPosition: UITableView.ScrollPosition) {
-        
+}
+
+extension SchoolListView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        let data = viewModel.schools[row]
+        if let sat = viewModel.getSchoolSAT(id: data.id) {
+            let detailsViewController = DetailsViewController(data: sat)
+            controller.present(detailsViewController, animated: true)
+        }
     }
 }
