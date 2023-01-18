@@ -4,8 +4,7 @@ This is  a demo for a school Informations
 
 ## 🚀 Features
 ```
-SwiftUI
-WebKit Embed
+UIKit
 TDD development
 ```
 ### 🖼 Overlays
@@ -28,7 +27,7 @@ Based on MVVM pattern
             used API,
             parse HTML by SwiftSoup 
 
-TDD: Coveage Rate >90%  =98%
+TDD: 
     20220531-jian&li-NYCSchoolsTests:
         testSchoolListViewModel:
             mock data for load school list
