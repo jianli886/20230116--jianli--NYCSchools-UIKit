@@ -1,4 +1,4 @@
-![Demo Snapshot](https://github.com/jala886/20220531-jian-li-NYCSchools/blob/main/Demo%20Snapshot/)
+![Demo Snapshot](https://github.com/jala886/20230116--jianli--NYCSchools-UIKit/blob/main/ScreenShot%20main.png)
 This is  a demo for a school Informations 
 
 
@@ -39,7 +39,7 @@ TDD: Coveage Rate >90%  =98%
             simulated switch between screen 1 and screen 2
 ```
 ### 🛠 Appearance / Behavior Customization
-![Demo Snapshot](https://github.com/jala886/20220531-jian-li-NYCSchools/blob/main/Demo%20Snapshot/DetailView.png)
+![Demo Snapshot](https://github.com/jala886/20230116--jianli--NYCSchools-UIKit/blob/main/ScreenShot%20main.png)
 
 ### 👀 Adapt visibility of:
 
