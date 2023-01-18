@@ -1,4 +1,4 @@
-![Demo Snapshot](https://github.com/jala886/20220531-jian-li-NYCSchools/blob/main/Demo%20Snapshot/)
+![Demo Snapshot]([https://github.com/jala886/20220531-jian-li-NYCSchools/blob/main/Demo%20Snapshot/](https://github.com/jala886/20230116--jianli--NYCSchools-UIKit/blob/main/Simulator%20Screen%20Shot%20-%20iPhone%2014%20Pro%20-%202023-01-18%20at%2011.23.24.png))
 This is  a demo for a school Informations 
 
 
