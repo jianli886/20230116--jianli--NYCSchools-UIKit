@@ -28,6 +28,14 @@ final class _0230116_jian_li_NYCSchoolsUITests: XCTestCase {
         app.launch()
 
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        sleep(3)
+        print("start debug UI Test")
+        // jump to first school, this school no SAT Score
+        let tablesQuery = app.tables
+        tablesQuery.element(boundBy: 0).cells.element(boundBy: 1).tap()
+        sleep(3)
+        let element = app.windows.element
+        element.swipeDown()
     }
 
     func testLaunchPerformance() throws {

@@ -8,29 +8,28 @@
 import Foundation
 
 class SchoolListViewModel: ObservableObject {
-    // schools catch
+    // schools cach, cach the schools list information
     var schollsPublisher:Published<[SchoolModel]>.Publisher{$schools}
+    var networkManager: NetworkManagerProtocol = NetworkManager()
     
     @Published var schools = [SchoolModel]()
-    // sats catch
+    // sats cach, catch the shcoool's SAT information for later used
     @Published var sats = [SchoolSATModel]()
     
     @MainActor
     init(){
-        /*
-        schools = [SchoolModel(id: "0123", name: "new yourk state", overview: "it is overview", location: "1340 street NR", phone: "233-460-7887", website: "www.empty.com"),
-                   SchoolModel(id: "1123", name: "2new yourk state", overview: "2it is overview", location: "21340 street NR", phone: "233-460-7887", website: "www.empty.com"),
-        ]*/
+        // load data frome network
         Task{
             do {
-                let data = try await NetworkManager.downloadListSchoolData()
+                let data = try await networkManager.downloadListSchoolData()
                 self.schools = try JSONDecoder().decode([SchoolModel].self, from: data)
             }catch(let e){
                 print(e.localizedDescription)
             }
         }
+        // load SAT score
         do {
-            let data = try NetworkManager.downloadSATSchoolData{ data in
+            try networkManager.downloadSATSchoolData{ data in
                 self.loadSATData(data: data)
             }
             print("load data success!")
@@ -60,6 +59,8 @@ class SchoolListViewModel: ObservableObject {
     func getSchoolSAT(id:String)->SchoolSATModel?{
         return self.sats.filter{$0.id == id}.first
     }
+    
+    // load more infomation
     func loadMore(){
         print("load more!")
         //sleep(3)

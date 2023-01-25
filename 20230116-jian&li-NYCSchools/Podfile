@@ -1,0 +1,8 @@
+# Uncomment the next line to define a global platform for your project
+
+target '20230116-jian&li-NYCSchools' do
+
+use_frameworks!
+
+pod 'Alamofire', "~> 5.0"
+end

@@ -8,9 +8,9 @@
 import UIKit
 
 class DetailsViewController: UIViewController {
-    let data: SchoolSATModel
+    let data: SchoolSATModel?
     
-    init(data: SchoolSATModel) {
+    init(data: SchoolSATModel?) {
         self.data = data
         super.init(nibName: nil, bundle: nil)
     }
@@ -25,7 +25,14 @@ class DetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
     }
-    
+    lazy var backButton: UIButton = {
+        let button = UIButton(type: .custom)
+        //button.frame = CGRect(x: 15, y: 15, width: 7, height: 10)
+        button.setTitle("Back", for: .normal)
+        button.configuration = .filled()
+        button.addTarget(self, action: #selector(back), for: .touchUpInside)
+        return button
+    }()
     // name
     lazy var nameTitleLabel:UILabel = {
         let label = UILabel()
@@ -37,7 +44,7 @@ class DetailsViewController: UIViewController {
     }()
     lazy var nameLabel:UILabel = {
         let label = UILabel()
-        label.text = data.name
+        label.text = data?.name ?? "No Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
@@ -56,7 +63,7 @@ class DetailsViewController: UIViewController {
     }()
     lazy var numberLabel:UILabel = {
         let label = UILabel()
-        label.text = data.numOfSAT
+        label.text = data?.numOfSAT ?? "No Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
@@ -74,7 +81,7 @@ class DetailsViewController: UIViewController {
     }()
     lazy var readingLabel:UILabel = {
         let label = UILabel()
-        label.text = data.readingAvgScore
+        label.text = data?.readingAvgScore ?? "No Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
@@ -92,7 +99,7 @@ class DetailsViewController: UIViewController {
     }()
     lazy var mathLabel:UILabel = {
         let label = UILabel()
-        label.text = data.mathAvgScore
+        label.text = data?.mathAvgScore ?? "No Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
@@ -110,7 +117,7 @@ class DetailsViewController: UIViewController {
     }()
     lazy var writingLabel:UILabel = {
         let label = UILabel()
-        label.text = data.writingAvgScore
+        label.text = data?.writingAvgScore ?? "No Value"
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 16)
         label.numberOfLines = 1
@@ -119,6 +126,8 @@ class DetailsViewController: UIViewController {
     }()
     
     private func setupUI() {
+        let line0 = UIStackView(arrangedSubviews: [backButton])
+        line0.alignment = .center
         let line1 = UIStackView(arrangedSubviews: [
             nameTitleLabel, nameLabel])
         line1.spacing = 10
@@ -141,7 +150,7 @@ class DetailsViewController: UIViewController {
         line5.distribution = .equalSpacing
         
         let stack = UIStackView(arrangedSubviews: [
-        line1, line2, line3, line4, line5])
+        line1, line2, line3, line4, line5, line0])
         stack.axis = .vertical
         stack.alignment = .top
         stack.distribution = .fillEqually
@@ -166,5 +175,8 @@ class DetailsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    @objc func back() {
+        self.dismiss(animated: true)
+    }
 }

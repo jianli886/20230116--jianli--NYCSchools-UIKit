@@ -1,32 +1,37 @@
-![Demo Snapshot](https://github.com/jala886/20220531-jian-li-NYCSchools/blob/main/Demo%20Snapshot/)
+![Demo Snapshot]()
 This is  a demo for a school Informations 
 
 
 ## 🚀 Features
 ```
-SwiftUI
-WebKit Embed
+UIKit
+MVVM pattern
 TDD development
 ```
 ### 🖼 Overlays
 ```
 Based on MVVM pattern
-    * View
+    * Views
+        SchoolListViewController:
+            main entry
+        SchoolListViewCell
         SchoolListView
-        DetailSchoolView
-            embed the home website of school
-            ❗️(it's slow and need 2-5s to load)
-            ❗️ToDo❗️:
-                embed mapkit to show school location
+        DetailsViewController
+            a view show details SAT info. could back click button
                 
     * ViewModel
+        load data and combine with views
     * Model
         defined data structur
     * Network
-        download data
-        ❗️ToDo❗️:
-            used API,
+        URLs
+            save the real URLs and return available URLs
+        NetworkManager
+            used Alamofire and native method.
+            send data by async/wait and clouser method
             parse HTML by SwiftSoup 
+        MockNetworkManager
+            supply mock data for test and developing
 
 TDD: Coveage Rate >90%  =98%
     20220531-jian&li-NYCSchoolsTests:
@@ -39,7 +44,7 @@ TDD: Coveage Rate >90%  =98%
             simulated switch between screen 1 and screen 2
 ```
 ### 🛠 Appearance / Behavior Customization
-![Demo Snapshot](https://github.com/jala886/20220531-jian-li-NYCSchools/blob/main/Demo%20Snapshot/DetailView.png)
+![Demo Snapshot](https://github.com/jala886/20230116--jianli--NYCSchools-UIKit/blob/main/ScreenShot%20main.png)
 
 ### 👀 Adapt visibility of:
 

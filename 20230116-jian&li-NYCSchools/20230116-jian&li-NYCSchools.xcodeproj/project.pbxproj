@@ -25,6 +25,7 @@
 		0265890F2975CB700032CDEF /* SchoolModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0265890E2975CB700032CDEF /* SchoolModel.swift */; };
 		026589112975CB8A0032CDEF /* SchoolSATModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026589102975CB8A0032CDEF /* SchoolSATModel.swift */; };
 		02A740FE29788307007945D1 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A740FD29788307007945D1 /* DetailsViewController.swift */; };
+		089773BBC1EC496AC4045C6E /* Pods_20230116_jian_li_NYCSchools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBDFC8C5D7EFCFDEC3B15931 /* Pods_20230116_jian_li_NYCSchools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,9 @@
 		0265890E2975CB700032CDEF /* SchoolModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolModel.swift; sourceTree = "<group>"; };
 		026589102975CB8A0032CDEF /* SchoolSATModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolSATModel.swift; sourceTree = "<group>"; };
 		02A740FD29788307007945D1 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		CED013B4800A57164FF4F79C /* Pods-20230116-jian&li-NYCSchools.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20230116-jian&li-NYCSchools.release.xcconfig"; path = "Target Support Files/Pods-20230116-jian&li-NYCSchools/Pods-20230116-jian&li-NYCSchools.release.xcconfig"; sourceTree = "<group>"; };
+		E0C3AB233C463BE4A4F60AE2 /* Pods-20230116-jian&li-NYCSchools.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-20230116-jian&li-NYCSchools.debug.xcconfig"; path = "Target Support Files/Pods-20230116-jian&li-NYCSchools/Pods-20230116-jian&li-NYCSchools.debug.xcconfig"; sourceTree = "<group>"; };
+		FBDFC8C5D7EFCFDEC3B15931 /* Pods_20230116_jian_li_NYCSchools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_20230116_jian_li_NYCSchools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089773BBC1EC496AC4045C6E /* Pods_20230116_jian_li_NYCSchools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,8 @@
 				026588DF297595810032CDEF /* 20230116-jian&li-NYCSchoolsTests */,
 				026588E9297595810032CDEF /* 20230116-jian&li-NYCSchoolsUITests */,
 				026588C72975957F0032CDEF /* Products */,
+				289C538A755371F8A9FA2C37 /* Pods */,
+				4ED363EDC76BDFAFE3F36E28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -194,6 +201,24 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		289C538A755371F8A9FA2C37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0C3AB233C463BE4A4F60AE2 /* Pods-20230116-jian&li-NYCSchools.debug.xcconfig */,
+				CED013B4800A57164FF4F79C /* Pods-20230116-jian&li-NYCSchools.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4ED363EDC76BDFAFE3F36E28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBDFC8C5D7EFCFDEC3B15931 /* Pods_20230116_jian_li_NYCSchools.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,9 +226,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 026588F0297595810032CDEF /* Build configuration list for PBXNativeTarget "20230116-jian&li-NYCSchools" */;
 			buildPhases = (
+				F47B15FC2765A6287524194A /* [CP] Check Pods Manifest.lock */,
 				026588C22975957F0032CDEF /* Sources */,
 				026588C32975957F0032CDEF /* Frameworks */,
 				026588C42975957F0032CDEF /* Resources */,
+				95F3BBA1E2E5EEBF31E62BDE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -319,6 +346,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		95F3BBA1E2E5EEBF31E62BDE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-20230116-jian&li-NYCSchools/Pods-20230116-jian&li-NYCSchools-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-20230116-jian&li-NYCSchools/Pods-20230116-jian&li-NYCSchools-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-20230116-jian&li-NYCSchools/Pods-20230116-jian&li-NYCSchools-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F47B15FC2765A6287524194A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-20230116-jian&li-NYCSchools-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		026588C22975957F0032CDEF /* Sources */ = {
@@ -508,6 +577,7 @@
 		};
 		026588F1297595810032CDEF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0C3AB233C463BE4A4F60AE2 /* Pods-20230116-jian&li-NYCSchools.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -527,14 +597,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jianli.com.-0230116-jian-li-NYCSchools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		026588F2297595810032CDEF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CED013B4800A57164FF4F79C /* Pods-20230116-jian&li-NYCSchools.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,9 +628,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jianli.com.-0230116-jian-li-NYCSchools";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -567,14 +644,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jianli.com.-0230116-jian-li-NYCSchoolsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20230116-jian&li-NYCSchools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/20230116-jian&li-NYCSchools";
 			};
 			name = Debug;
@@ -586,14 +667,18 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jianli.com.-0230116-jian-li-NYCSchoolsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/20230116-jian&li-NYCSchools.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/20230116-jian&li-NYCSchools";
 			};
 			name = Release;
@@ -604,13 +689,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jianli.com.-0230116-jian-li-NYCSchoolsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "20230116-jian&li-NYCSchools";
 			};
 			name = Debug;
@@ -621,13 +710,17 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "jianli.com.-0230116-jian-li-NYCSchoolsUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = "20230116-jian&li-NYCSchools";
 			};
 			name = Release;
@@ -642,7 +735,7 @@
 				026588EF297595810032CDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		026588F0297595810032CDEF /* Build configuration list for PBXNativeTarget "20230116-jian&li-NYCSchools" */ = {
 			isa = XCConfigurationList;
@@ -651,7 +744,7 @@
 				026588F2297595810032CDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		026588F3297595810032CDEF /* Build configuration list for PBXNativeTarget "20230116-jian&li-NYCSchoolsTests" */ = {
 			isa = XCConfigurationList;
@@ -660,7 +753,7 @@
 				026588F5297595810032CDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		026588F6297595810032CDEF /* Build configuration list for PBXNativeTarget "20230116-jian&li-NYCSchoolsUITests" */ = {
 			isa = XCConfigurationList;
@@ -669,7 +762,7 @@
 				026588F8297595810032CDEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

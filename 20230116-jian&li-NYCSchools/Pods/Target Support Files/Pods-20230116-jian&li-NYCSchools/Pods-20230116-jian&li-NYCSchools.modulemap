@@ -1,0 +1,6 @@
+framework module Pods_20230116_jian_li_NYCSchools {
+  umbrella header "Pods-20230116-jian&li-NYCSchools-umbrella.h"
+
+  export *
+  module * { export * }
+}

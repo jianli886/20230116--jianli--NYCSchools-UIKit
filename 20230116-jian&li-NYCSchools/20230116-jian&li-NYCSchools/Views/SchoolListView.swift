@@ -61,6 +61,7 @@ extension SchoolListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let row = indexPath.row
         let cell = dequeueReusableCell(withIdentifier: SchoolListViewCell.identifier, for: indexPath)
+        // call details screen, after clicked table cell
         if let cell = cell as? SchoolListViewCell {
             cell.setData(data: viewModel.schools[row])
             cell.refresh()
@@ -73,9 +74,8 @@ extension SchoolListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = indexPath.row
         let data = viewModel.schools[row]
-        if let sat = viewModel.getSchoolSAT(id: data.id) {
-            let detailsViewController = DetailsViewController(data: sat)
-            controller.present(detailsViewController, animated: true)
-        }
+        let sat = viewModel.getSchoolSAT(id: data.id)
+        let detailsViewController = DetailsViewController(data: sat)
+        controller.present(detailsViewController, animated: true)
     }
 }
